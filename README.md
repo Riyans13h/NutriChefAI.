@@ -2,19 +2,6 @@
 
 ## *A Hybrid AI Architecture Combining Data Science, Vector Retrieval, and Grounded Generative AI*
 
----
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Architecture-Hybrid%20AI%20System-blueviolet"/>
-  <img src="https://img.shields.io/badge/Accuracy-98.7%25-brightgreen"/>
-  <img src="https://img.shields.io/badge/Hallucination%20Rate-<0.5%25-green"/>
-  <img src="https://img.shields.io/badge/Response%20Time-1.2s%20avg-orange"/>
-  <img src="https://img.shields.io/badge/User%20Satisfaction-4.7/5.0-yellow"/>
-  <img src="https://img.shields.io/badge/Production-Ready%20Enterprise-success"/>
-</p>
-
----
-
 ## 📋 **Table of Contents**
 1. [Executive Summary](#-executive-summary)
 2. [Architectural Overview](#-architectural-overview)
