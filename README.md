@@ -674,11 +674,3 @@ The system's mathematical rigor, combined with its practical implementation, mak
 As food systems become increasingly complex and personalized nutrition gains importance, NutriChef provides a blueprint for how AI can be responsibly and effectively deployed to improve everyday decision-making while maintaining the highest standards of accuracy and reliability.
 
 ---
-
-## 📄 **License & Citation**
-
-This project is available under the MIT License. For academic use, please cite:
-
-
-
-*Document Version: 3.1.0 | Last Updated: October 2024 | Status: Production Ready*
