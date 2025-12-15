@@ -39,26 +39,25 @@ The LLM is used **only to explain and format recipes**, never to invent ingredie
 ---
 
 ## 🏗 System Architecture (Actual Implementation)
-
-```mermaid
+'''
 graph TB
-    U[ngredients + Goal] --> N[Ingredient Normalizer]
+    U[Ingredients + Goal] --> N[Ingredient Normalizer]
     N --> M[Ingredient Matching Engine]
     M --> F[Feasible Recipe Filter]
 
     F --> S[Scoring Engine]
     S --> R[Ranked Recipes]
 
-    R --> V[Vector Retrieval<br/>ChromaDB]
+    R --> V[Vector Retrieval<br>ChromaDB]
     V --> C[RAG Context Builder]
-    C --> L[LLM Generation<br/>(Constrained)]
-
+    C --> L[LLM Generation Layer]
+    
     L --> O[Final Recipe Output]
     O --> FB[User Feedback]
     FB --> RL[Reinforcement Learning Agent]
     RL --> UP[Update Scoring Weights]
     UP --> S
-    
+
     subgraph Data_Layer
         D1[(MySQL Database)]
         D2[(ChromaDB Vector Store)]
@@ -67,8 +66,8 @@ graph TB
     M --> D1
     S --> D1
     V --> D2
-```
-
+    
+'''
 ### Architecture Principles
 * Deterministic filtering before AI
 * Retrieval before generation
