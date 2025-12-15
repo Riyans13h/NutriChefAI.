@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Register | NutriChefAI{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Create Your NutriChefAI Account</h2>
+
+    {% if error %}
+        <div class="error-message">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    <form method="POST" action="/register">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your full name"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter your email"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Create a strong password"
+            >
+        </div>
+
+        <button type="submit" class="btn-primary">
+            Register
+        </button>
+    </form>
+
+    <p class="form-footer">
+        Already have an account?
+        <a href="/login">Login here</a>
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Final Recipe | NutriChefAI{% endblock %}
+
+{% block content %}
+<div class="final-recipe-container">
+
+    <h2>{{ recipe.title }}</h2>
+
+    <!-- Required Ingredients -->
+    <section class="recipe-section">
+        <h3>Required Ingredients</h3>
+        <ul>
+            {% for ingredient in recipe.required_ingredients %}
+                <li>{{ ingredient }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Instructions -->
+    <section class="recipe-section">
+        <h3>Step-by-step Instructions</h3>
+        <ol>
+            {% for step in recipe.instructions %}
+                <li>{{ step }}</li>
+            {% endfor %}
+        </ol>
+    </section>
+
+    <!-- Nutrition -->
+    <section class="recipe-section">
+        <h3>Nutrition Breakdown</h3>
+        <ul>
+            <li>Calories: {{ recipe.nutrition.calories }}</li>
+            <li>Protein: {{ recipe.nutrition.protein }} g</li>
+            <li>Fat: {{ recipe.nutrition.fat }} g</li>
+            <li>Carbohydrates: {{ recipe.nutrition.carbohydrates }} g</li>
+        </ul>
+    </section>
+
+    <!-- Goal Fit -->
+    <section class="recipe-section">
+        <h3>Why this recipe fits your goal</h3>
+        <p>{{ recipe.goal_reason }}</p>
+    </section>
+
+    <!-- Missing Ingredients -->
+    <section class="recipe-section">
+        <h3>Missing Ingredients</h3>
+        {% if recipe.missing_ingredients %}
+            <ul class="warning-text">
+                {% for ingredient in recipe.missing_ingredients %}
+                    <li>{{ ingredient }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="success-text">No missing ingredients 🎉</p>
+        {% endif %}
+    </section>
+
+    <!-- Tips -->
+    <section class="recipe-section">
+        <h3>Optional Tips or Healthier Alternatives</h3>
+        <p>{{ recipe.tips }}</p>
+    </section>
+
+    <!-- Actions -->
+    <div class="action-buttons">
+        <a href="/recipes" class="btn-secondary">Back to Recipes</a>
+        <a href="/dashboard" class="btn-primary">Dashboard</a>
+    </div>
+
+</div>
+{% endblock %}

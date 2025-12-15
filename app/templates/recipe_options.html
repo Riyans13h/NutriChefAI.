@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Recipe Options | NutriChefAI{% endblock %}
+
+{% block content %}
+<div class="recipes-container">
+
+    <h2>Recommended Recipes</h2>
+    <p class="subtitle">
+        These recipes are ranked based on your available ingredients
+        and health goal.
+    </p>
+
+    {% if recipes|length == 0 %}
+        <p>No suitable recipes found with your current ingredients.</p>
+    {% else %}
+        <div class="recipe-list">
+
+            {% for recipe in recipes %}
+                <div class="recipe-card">
+
+                    <h3>{{ recipe.title }}</h3>
+
+                    <p><strong>Coverage:</strong> {{ recipe.coverage }}%</p>
+
+                    <p>
+                        <strong>Matched Ingredients:</strong>
+                        {{ recipe.matched_ingredients | join(", ") }}
+                    </p>
+
+                    {% if recipe.missing_ingredients %}
+                        <p class="warning-text">
+                            <strong>Missing Ingredients:</strong>
+                            {{ recipe.missing_ingredients | join(", ") }}
+                        </p>
+                    {% else %}
+                        <p class="success-text">
+                            All ingredients available
+                        </p>
+                    {% endif %}
+
+                    <form method="POST" action="/recipes/select">
+                        <input type="hidden" name="recipe_id" value="{{ recipe.id }}">
+                        <button type="submit" class="btn-primary">
+                            View Full Recipe
+                        </button>
+                    </form>
+
+                </div>
+            {% endfor %}
+
+        </div>
+    {% endif %}
+
+</div>
+{% endblock %}

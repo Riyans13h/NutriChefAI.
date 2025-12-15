@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Login | NutriChefAI{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Login to NutriChefAI</h2>
+
+    {% if error %}
+        <div class="error-message">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    <form method="POST" action="/login">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                placeholder="Enter your email"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                required
+                placeholder="Enter your password"
+            >
+        </div>
+
+        <button type="submit" class="btn-primary">
+            Login
+        </button>
+    </form>
+
+    <p class="form-footer">
+        Don’t have an account?
+        <a href="/register">Register here</a>
+    </p>
+</div>
+{% endblock %}

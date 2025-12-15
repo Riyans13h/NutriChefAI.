@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | NutriChefAI{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+
+    <h2>Welcome, {{ user.name }} 👋</h2>
+    <p class="subtitle">
+        Plan meals based on ingredients you already have.
+    </p>
+
+    <div class="dashboard-cards">
+
+        <div class="card">
+            <h3>🥗 Add Ingredients</h3>
+            <p>
+                Tell us what ingredients are available in your kitchen.
+                NutriChefAI will use only these to suggest recipes.
+            </p>
+            <a href="/ingredients" class="btn-primary">Add Ingredients</a>
+        </div>
+
+        <div class="card">
+            <h3>🍽 Get Recipes</h3>
+            <p>
+                Generate personalized recipes based on your ingredients
+                and health goal.
+            </p>
+            <a href="/recipes" class="btn-primary">View Recipes</a>
+        </div>
+
+        <div class="card">
+            <h3>📊 Your Preferences</h3>
+            <p>
+                NutriChefAI learns from your feedback to improve
+                future recommendations.
+            </p>
+            <span class="info-text">Feedback-enabled recommendations</span>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
