@@ -1,0 +1,12 @@
+Flask
+Flask-SQLAlchemy
+Flask-JWT-Extended
+python-dotenv
+
+mysqlclient
+chromadb
+openai
+
+numpy
+pandas
+scikit-learn
