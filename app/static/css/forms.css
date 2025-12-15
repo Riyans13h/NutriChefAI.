@@ -1,0 +1,94 @@
+/* --------------------
+   Form Containers
+--------------------- */
+
+.form-container,
+.ingredients-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h2,
+.ingredients-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* --------------------
+   Form Groups
+--------------------- */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #2c3e50;
+}
+
+/* --------------------
+   Inputs & Select
+--------------------- */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #27ae60;
+}
+
+/* --------------------
+   Textarea
+--------------------- */
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* --------------------
+   Buttons inside forms
+--------------------- */
+
+.form-container button,
+.ingredients-container button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* --------------------
+   Form Footer Links
+--------------------- */
+
+.form-footer {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.form-footer a {
+    color: #27ae60;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
