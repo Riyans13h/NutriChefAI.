@@ -42,7 +42,7 @@ The LLM is used **only to explain and format recipes**, never to invent ingredie
 
 ```mermaid
 graph TB
-    U[User Input<br/>Ingredients + Goal] --> N[Ingredient Normalizer]
+    U[ngredients + Goal] --> N[Ingredient Normalizer]
     N --> M[Ingredient Matching Engine]
     M --> F[Feasible Recipe Filter]
 
